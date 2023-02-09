@@ -1,7 +1,17 @@
 // Array Methods:
 // Run ctrl+alt+N
 
-/** @todo at() */
+/** at()
+ * syntax: arr1.at(index)
+ * takes an integer value and returns the item at that index
+ * allows positive and negative integers
+ * negative integers count back from the last item in the array.
+ */
+
+const musicians = ["George Ezra", "Jake Bugg", "Robbie Williams"]
+console.log('last', musicians.at(-1))
+console.log('middle', musicians.at(1))
+
 
 /** concat()
  * syntax: arr1.concat(arr2, arr3, ... arrX)
@@ -56,4 +66,26 @@ for (let pD of iterator) {
   console.log('District', pD)
 }
 
-/** @todo every() */
+/** every()
+ * syntax: arr.every(f)
+ * tests whether all elements in the array pass test 
+ * returns a Boolean value.
+ */
+
+const isAdult = (value) => value >= 18; 
+const ages = [12,48,45,18,19]
+const agesOk = [21,18,56,90,74]
+
+console.log('all Adult', ages.every(isAdult))
+console.log('all Adult', agesOk.every(isAdult))
+
+/** fill() 
+ * changes all elements in an array to a static value
+ * from a start index (default 0) to an end index (default array.length)
+ * returns the modified array.
+*/
+
+const bestSongs = ["Highway to Hell", "Living after midnight", "Poker face", "Young turks",]
+console.log('corrected best songs', bestSongs.fill("Another brick in the wall", 2,3))
+
+// @todo filter, find, findIndex
