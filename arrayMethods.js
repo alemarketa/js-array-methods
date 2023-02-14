@@ -88,4 +88,34 @@ console.log('all Adult', agesOk.every(isAdult))
 const bestSongs = ["Highway to Hell", "Living after midnight", "Poker face", "Young turks",]
 console.log('corrected best songs', bestSongs.fill("Another brick in the wall", 2,3))
 
-// @todo filter, find, findIndex
+/** filter() 
+ * syntax: arr.filter( e => f) 
+ * method creates a shallow copy (changing copy = changing source) of a given array
+ * filtered down to just the elements(e) from the given array that pass the test 
+ * implemented by the provided function(f).
+*/
+
+let words = ["slovo", "palabra", "word", "parole"]
+console.log('more than 4 letters:', words.filter(word => word.length > 4))
+
+/** find()
+ * syntax: arr.find(e => f)
+ * returns the first element in the array that satisfies the testing function. 
+ * If no values satisfy the testing function, undefined is returned.
+*/
+
+let arr5 = [12, 45, 78, 11]
+console.log('first in arr bigger than 10:', arr5.find(n => n > 10))
+console.log('first in arr smaller than 10:', arr5.find(n => n < 10))
+
+/** findIndex()
+ * syntax: arr.findIndex(e => f)
+ * returns the index of the first element in an array that satisfies testing function.
+ * If no elements satisfy the testing function, -1 is returned.
+*/
+
+let arr6 = [12, 45, 78, 11]
+console.log('firstIndex in arr bigger than 10:', arr6.findIndex(n => n > 10))
+console.log('firstIndex in arr smaller than 10:', arr6.findIndex(n => n < 10))
+
+// @todo findLast, findLastIndex, flat
