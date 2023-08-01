@@ -1,6 +1,7 @@
 // Array Methods:
 // Run ctrl+alt+N
 // This line was added in master
+// This second line was added in master
 
 /** at()
  * syntax: arr1.at(index)
